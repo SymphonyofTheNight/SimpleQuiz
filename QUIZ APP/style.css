@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@font-face {
+  src: url("bold.otf");
+  font-family: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 15px;
+}
+
+.container {
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), -webkit-gradient(linear, left top, right top, from(black), to(black));
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, black, black);
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .center-div {
+  background: #080620;
+  height: 35vh;
+  width: 50vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .center-div .question-container {
+  background: rgba(107, 98, 98, 0);
+  height: 10vh;
+  width: 45vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .center-div .question-container h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.container .center-div .choices-container {
+  background: rgba(107, 98, 98, 0);
+  height: 20vh;
+  width: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .center-div .choices-container .btn {
+  background: #575fd4;
+  height: 8vh;
+  width: 18vw;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.container .center-div .choices-container .btn span {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  height: 8vh;
+  width: 18vw;
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.container .center-div .choices-container .btn span:hover {
+  color: white;
+}
+
+.container .center-div .choices-container .btn:hover {
+  -webkit-box-shadow: 0px 0px 15px #575fd4;
+          box-shadow: 0px 0px 15px #575fd4;
+}
+
+.container .startGamebtn {
+  background: #090d24;
+  height: 10vh;
+  width: 18vw;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.container .startGamebtn span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgba(70, 190, 206, 0.3);
+  -webkit-animation: start 2s linear infinite;
+          animation: start 2s linear infinite;
+}
+
+.container .startGamebtn .line-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to right, #090d24, #575fd4);
+  height: 4px;
+  width: 18vw;
+  position: absolute;
+  top: 0;
+  -webkit-animation: animate-1 2s linear infinite;
+          animation: animate-1 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.container .startGamebtn .line-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#090d24), to(#575fd4));
+  background: linear-gradient(to bottom, #090d24, #575fd4);
+  height: 10vh;
+  width: 4px;
+  position: absolute;
+  right: 0;
+  -webkit-animation: animate-2 2s linear infinite;
+          animation: animate-2 2s linear infinite;
+}
+
+.container .startGamebtn .line-3 {
+  background: -webkit-gradient(linear, right top, left top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to left, #090d24, #575fd4);
+  height: 4px;
+  width: 18vw;
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: animate-3 2s linear infinite;
+          animation: animate-3 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.container .startGamebtn .line-4 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to top, #090d24, #575fd4);
+  height: 10vh;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  -webkit-animation: animate-4 2s linear infinite;
+          animation: animate-4 2s linear infinite;
+}
+
+@-webkit-keyframes start {
+  0% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+  50% {
+    color: #46bece;
+  }
+  100% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+}
+
+@keyframes start {
+  0% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+  50% {
+    color: #46bece;
+  }
+  100% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+}
+
+@-webkit-keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes animate-2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes animate-2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes animate-3 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-3 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes animate-4 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes animate-4 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+.container .startGamebtn:hover span {
+  color: #46bece;
+  font-size: 1.7rem;
+  -webkit-animation: 2s linear infinite;
+          animation: 2s linear infinite;
+}
+
+.container .nextGamebtn {
+  background: #090d24;
+  height: 10vh;
+  width: 18vw;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.container .nextGamebtn span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgba(70, 190, 206, 0.3);
+  -webkit-animation: start 2s linear infinite;
+          animation: start 2s linear infinite;
+}
+
+.container .nextGamebtn .line-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to right, #090d24, #575fd4);
+  height: 4px;
+  width: 18vw;
+  position: absolute;
+  top: 0;
+  -webkit-animation: animate-1 2s linear infinite;
+          animation: animate-1 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.container .nextGamebtn .line-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#090d24), to(#575fd4));
+  background: linear-gradient(to bottom, #090d24, #575fd4);
+  height: 10vh;
+  width: 4px;
+  position: absolute;
+  right: 0;
+  -webkit-animation: animate-2 2s linear infinite;
+          animation: animate-2 2s linear infinite;
+}
+
+.container .nextGamebtn .line-3 {
+  background: -webkit-gradient(linear, right top, left top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to left, #090d24, #575fd4);
+  height: 4px;
+  width: 18vw;
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: animate-3 2s linear infinite;
+          animation: animate-3 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.container .nextGamebtn .line-4 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#090d24), to(#575fd4));
+  background: linear-gradient(to top, #090d24, #575fd4);
+  height: 10vh;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  -webkit-animation: animate-4 2s linear infinite;
+          animation: animate-4 2s linear infinite;
+}
+
+@keyframes start {
+  0% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+  50% {
+    color: #46bece;
+  }
+  100% {
+    color: rgba(70, 190, 206, 0.3);
+  }
+}
+
+@keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes animate-2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes animate-3 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-4 {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+.container .nextGamebtn:hover span {
+  color: #46bece;
+  font-size: 1.7rem;
+  -webkit-animation: 2s linear infinite;
+          animation: 2s linear infinite;
+}
+
+.win {
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), -webkit-gradient(linear, left top, right top, from(#3f8d0b), to(#3f8d0b));
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #3f8d0b, #3f8d0b);
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.win span {
+  font-size: 4rem;
+  font-family: bold;
+  color: black;
+}
+
+.lose {
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), -webkit-gradient(linear, left top, right top, from(#ab0000), to(#ab0000));
+  background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #ab0000, #ab0000);
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lose span {
+  font-size: 4rem;
+  font-family: bold;
+  color: black;
+}
+
+.win-hide {
+  display: none;
+}
+
+.lose-hide {
+  display: none;
+}
+
+.container-hide {
+  display: none;
+}
+
+.startxt-hide {
+  display: none;
+}
+
+.center-div-hide {
+  display: none;
+}
+
+.startGame-hide {
+  display: none;
+}
+
+.nextGame-hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
